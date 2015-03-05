@@ -1,7 +1,7 @@
 "use strict";
 var sql = require('mssql'); 
 var query = require('./query.js');
-var config = require('./config.js');
+var config = require('./dbconfig.js');
 var express = require('express');
 //var jasmine = require('jasmine');
 var app = express();
