@@ -40,6 +40,10 @@ function apiCallAllGeneric(fn, res) {
        function (msg) { res.send(msg) });
 }
 
+// specify app as a public directory
+app.use(express.static(__dirname + '/dist'));
+//app.use(express.static(__dirname + '/app/styles'));
+
 
 app.get ('/api/policy/:groupNumber', function( req, res ) {
 
@@ -90,11 +94,23 @@ app.get('/api/client', function(req, res) {
     apiCallAllGeneric(query.getClients, res);    
 });
 
-// A default response
-app.get('/', function(req, res) {
-    res.type('text/plain'); // set content-type
-    res.send('i am a beautiful butterfly'); // send text response
-});
+// serve static files
+app.get('/*', function(req,res) { 
+    //console.log(req);
+    var path = __dirname.replace("/server", "/dist") + req.url;
+    console.log('static file request:', path);
+    res.sendFile(path); 
+ });
+
+// serves the home page
+app.get('/', function(req,res) { 
+    var path = __dirname.replace("/server", "/dist/index.html");
+    console.log('static file request:', path);
+    res.sendFile(path); 
+ });
+
+
+
 
 
 app.listen(process.env.PORT || 4730);
