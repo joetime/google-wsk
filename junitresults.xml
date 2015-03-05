@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="OMG a JavaScript Test" timestamp="2015-03-04T15:29:52" hostname="localhost" time="0.001" errors="0" tests="1" skipped="0" disabled="0" failures="1">
+  <testcase classname="OMG a JavaScript Test" name="should pass" time="0.001">
+   <failure type="toBe" message="Expected true to be false."><![CDATA[Error: Expected true to be false.
+    at stack (/Users/joetime/Dev/google-wsk/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1455:17)
+    at buildExpectationResult (/Users/joetime/Dev/google-wsk/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1425:14)
+    at Spec.Env.expectationResultFactory (/Users/joetime/Dev/google-wsk/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:572:18)
+    at Spec.addExpectationResult (/Users/joetime/Dev/google-wsk/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:321:34)
+    at Expectation.addExpectationResult (/Users/joetime/Dev/google-wsk/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:516:21)
+    at Expectation.toBe (/Users/joetime/Dev/google-wsk/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1379:12)
+    at Object.<anonymous> (/Users/joetime/Dev/google-wsk/spec/test.js:3:18)
+    at attemptSync (/Users/joetime/Dev/google-wsk/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1741:24)
+    at QueueRunner.run (/Users/joetime/Dev/google-wsk/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1729:9)
+    at QueueRunner.execute (/Users/joetime/Dev/google-wsk/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1714:10)]]>
+   </failure>
+  </testcase>
+ </testsuite>
+</testsuites>
