@@ -52,7 +52,7 @@ var exports = module.exports = {
     },
 
     getClients: function(sql, onsuccess, onerror, onnotfound) {
-        var qstring = 'select * from dbo.hzClients order by GroupNo';
+        var qstring = 'select Id, Name as n, GroupNo as g, DateAdded as d from dbo.hzClients order by GroupNo';
         console.log(qstring);
 
         var request = new sql.Request();
